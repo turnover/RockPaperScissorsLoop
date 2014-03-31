@@ -88,9 +88,9 @@ public class RPSLoop
 			}
 				played++;
 			
-				System.out.println("If you wish to stop press <ctrl> and z. If you wish to continue press any letter.");
+				System.out.println("If you wish to stop press please close the program. If you wish to continue press any letter.");
 				key = input.next();	
-		}while(true);
+		}while(play =true);
 	}
 }
 	
