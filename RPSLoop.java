@@ -18,23 +18,25 @@ public class RPSLoop
 		int played =0;
 		int num1;
 		String choice ="";
+		String key ="";
 		int computerNum;
 		computerNum = 0 + (int) (Math.random()*2);
 		
+		System.out.println("Do you wish to play Rock/Paper/Scissors? Yes or No: ");
+		choice = input.next();
+		
+		if(choice.equalsIgnoreCase("Yes"))
+		{
+			play = true;
+		}
+		else if(choice.equalsIgnoreCase("No"))
+		{
+			play = false;
+		}
+		
 		do
 		{
-			System.out.printf("You currently have %d wins, %d Losses and %d ties.\n", wins ,losses ,ties);
-	        System.out.println("Do you wish to play or continue playing? Please enter Yes or No: ");
-			choice = input.next();
-			
-			if(choice.equalsIgnoreCase("Yes"))
-			{
-				play = true;
-			}
-			else if(choice.equalsIgnoreCase("No"))
-			{
-				play = false;
-			}
+			System.out.printf("You currently have %d Wins, %d Losses, %d Ties, and %d Played.\n", wins ,losses ,ties, played);
 			
 			System.out.println("Play Rock, Paper, Scissors.");
 			System.out.println("0=Rock, 1=Paper, 2=Scissors.Please enter your choice: ");
@@ -85,6 +87,9 @@ public class RPSLoop
 				ties += 1;
 			}
 				played++;
+			
+				System.out.println("If you wish to stop press <ctrl> and z. If you wish to continue press any letter.");
+				key = input.next();	
 		}while(true);
 	}
 }
